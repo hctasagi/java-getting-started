@@ -4,10 +4,12 @@ package com.example;
 import org.junit.Test;
 
 
-class MainTest extends Main {
+public class MainTest extends Main {
 
 	@Test
-	void test() {
+	public void test1() {
+
+		System.out.println("aa");
 
 	}
 
