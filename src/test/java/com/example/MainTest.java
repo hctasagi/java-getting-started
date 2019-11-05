@@ -1,7 +1,7 @@
 package com.example;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 
 class MainTest extends Main {
