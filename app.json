@@ -1,5 +1,15 @@
 {
   "name": "Start on Heroku: Java",
   "description": "A barebones Java app, which can easily be deployed to Heroku.",
-  "addons": [ "heroku-postgresql" ]
+  "addons": [ "heroku-postgresql" ],
+
+   "environments": {
+    "test": {
+      "buildpacks": [
+        { "url": "heroku/java" },
+        { "url": "https://github.com/heroku/heroku-buildpack-google-chrome" },
+        { "url": "https://github.com/heroku/heroku-buildpack-chromedriver" }
+      ]
+    }
+  }
 }

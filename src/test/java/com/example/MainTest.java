@@ -9,6 +9,7 @@ public class MainTest extends Main {
 	@Test
 	public void test1() {
 
+
 		System.out.println("aa");
 
 	}
