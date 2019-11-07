@@ -1,6 +1,9 @@
 package com.example;
 
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,7 +28,8 @@ public class MainTest extends Main {
 
 		//Getting Started with Javaをクリック
 		driver.findElement(By.linkText("Getting Started with Java")).click();
-		System.out.println(driver.getTitle());
+		String title = driver.getTitle();
+		assertThat(title, containsString("Getting Started on Heroku with Java"));
 
 		driver.close();
 
