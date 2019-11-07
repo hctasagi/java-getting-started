@@ -2,6 +2,7 @@ package com.example;
 
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -21,6 +22,9 @@ public class MainTest extends Main {
 
 		//タイトルを取得
 		System.out.println(driver.getTitle());
+
+		//
+		driver.findElement(By.linkText(" Getting Started with Java")).click();
 
 		driver.close();
 
