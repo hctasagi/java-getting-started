@@ -3,7 +3,6 @@ package com.example;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -22,9 +21,9 @@ public class MainTest extends Main {
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 		//タイトルを取得
 		System.out.println(driver.getTitle());
-		//lang-logoを取得
-		WebElement logo = driver.findElement(By.className("lang-logo"));
-		System.out.println(logo.getText());
+		//Getting Started with Javaをクリック
+		driver.findElement(By.className("btn btn-lg btn-default")).click();;
+		System.out.println(driver.getTitle());
 		driver.close();
 
 	}
