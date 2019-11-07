@@ -17,10 +17,11 @@ public class MainTest extends Main {
 		options.addArguments("--headless", "--disable-gpu");
 
 		ChromeDriver driver = new ChromeDriver(options);
-		driver.get("https://www.google.com");
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
+		System.out.println(driver.getTitle());
 		driver.close();
 
-		System.out.println("aa");
+//		System.out.println("aa");
 
 	}
 
