@@ -2,7 +2,6 @@ package com.example;
 
 
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -19,12 +18,10 @@ public class MainTest extends Main {
 
 		ChromeDriver driver = new ChromeDriver(options);
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
+
 		//タイトルを取得
 		System.out.println(driver.getTitle());
-		//Getting Started with Javaをクリック
-		driver.findElement(By.xpath("button[@className='glyphicon glyphicon-flash']")).click();
 
-		System.out.println(driver.getTitle());
 		driver.close();
 
 	}
