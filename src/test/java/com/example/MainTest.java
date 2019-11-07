@@ -22,7 +22,7 @@ public class MainTest extends Main {
 		//タイトルを取得
 		System.out.println(driver.getTitle());
 		//Getting Started with Javaをクリック
-		driver.findElement(By.xpath("button[@text='Getting Started with Java']")).click();
+		driver.findElement(By.xpath("button[@className='glyphicon glyphicon-flash']")).click();
 
 		System.out.println(driver.getTitle());
 		driver.close();
