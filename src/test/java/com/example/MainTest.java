@@ -24,7 +24,7 @@ public class MainTest extends Main {
 		System.out.println(driver.getTitle());
 
 		//
-		driver.findElement(By.linkText(" Getting Started with Java")).click();
+		driver.findElement(By.linkText("Getting Started with Java")).click();
 
 		driver.close();
 
