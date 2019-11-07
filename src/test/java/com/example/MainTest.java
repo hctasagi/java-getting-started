@@ -22,7 +22,8 @@ public class MainTest extends Main {
 		//タイトルを取得
 		System.out.println(driver.getTitle());
 		//Getting Started with Javaをクリック
-		driver.findElement(By.className("btn btn-lg btn-default")).click();
+		driver.findElement(By.xpath("button[@text='Getting Started with Java']")).click();
+
 		System.out.println(driver.getTitle());
 		driver.close();
 
