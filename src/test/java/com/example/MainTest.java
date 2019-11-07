@@ -23,8 +23,9 @@ public class MainTest extends Main {
 		//タイトルを取得
 		System.out.println(driver.getTitle());
 
-		//
+		//Getting Started with Javaをクリック
 		driver.findElement(By.linkText("Getting Started with Java")).click();
+		System.out.println(driver.getTitle());
 
 		driver.close();
 
