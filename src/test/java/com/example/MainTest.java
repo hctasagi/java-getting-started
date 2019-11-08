@@ -65,7 +65,6 @@ public class MainTest extends Main {
 		driver.findElement(By.linkText("150 add-on services")).click();
 
 		WebElement search = driver.findElement(By.name("q"));
-		search.click();
 		search.sendKeys("heroku");
 		driver.findElement(By.className("search-submit")).click();
 	}
