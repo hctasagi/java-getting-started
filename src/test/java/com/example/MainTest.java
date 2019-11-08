@@ -33,11 +33,10 @@ public class MainTest extends Main {
 	}
 
 	@Test
-	public void test1() throws InterruptedException {
+	public void test1() {
 
 
 		//タイトルを取得
-		Thread.sleep(3000);
 		System.out.println(driver.getTitle());
 
 		//Getting Started with Javaをクリック
