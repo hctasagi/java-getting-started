@@ -23,6 +23,8 @@ public class MainTest extends Main {
 		options.addArguments("--headless", "--disable-gpu");
 
 		driver = new ChromeDriver(options);
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
+
 	}
 
 	@After
@@ -33,7 +35,6 @@ public class MainTest extends Main {
 	@Test
 	public void test1() throws InterruptedException {
 
-		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//タイトルを取得
 		Thread.sleep(3000);
@@ -48,8 +49,6 @@ public class MainTest extends Main {
 
 	@Test
 	public void test2() {
-
-		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//Source on GitHubをクリック
 		driver.findElement(By.linkText("Source on GitHub")).click();
