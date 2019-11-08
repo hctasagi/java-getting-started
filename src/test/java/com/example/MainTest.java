@@ -31,11 +31,12 @@ public class MainTest extends Main {
 	}
 
 	@Test
-	public void test1() {
+	public void test1() throws InterruptedException {
 
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//タイトルを取得
+		Thread.sleep(3000);
 		System.out.println(driver.getTitle());
 
 		//Getting Started with Javaをクリック
