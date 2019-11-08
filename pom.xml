@@ -122,13 +122,17 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-            <parallel>classes</parallel>
-            <threadCount>10</threadCount>
-        </configuration>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.17</version>
+		<dependencies>
+  		<dependency>
+   		<groupId>org.apache.maven.surefire</groupId>
+   		<artifactId>surefire-junit47</artifactId>
+   		<version>2.17</version>
+ 		</dependency>
+		</dependencies>
     </plugin>
     </plugins>
   </build>
