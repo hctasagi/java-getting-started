@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -63,8 +64,10 @@ public class MainTest extends Main {
 		//150 add-on servicesをクリック
 		driver.findElement(By.linkText("150 add-on services")).click();
 
-		driver.findElement(By.name("newsletter_signup[email]")).sendKeys("heroku");
-		driver.findElement(By.name("commit")).click();
+		WebElement search = driver.findElement(By.name("q"));
+		search.click();
+		search.sendKeys("heroku");
+		driver.findElement(By.className("search-submit")).click();
 	}
 
 }
