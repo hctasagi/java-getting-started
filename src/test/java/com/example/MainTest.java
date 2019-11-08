@@ -4,6 +4,8 @@ package com.example;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,15 +14,25 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class MainTest extends Main {
 
-	@Test
-	public void test1() {
+	private ChromeDriver driver;
 
-		System.setProperty("webdriver.chrome.driver", "/app/.chromedriver/bin/chromedriver");
 
+	@Before
+	public void setUp() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless", "--disable-gpu");
 
-		ChromeDriver driver = new ChromeDriver(options);
+		driver = new ChromeDriver(options);
+	}
+
+	@After
+	public void tearDown() {
+		driver.quit();
+	}
+
+	@Test
+	public void test1() {
+
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//タイトルを取得
@@ -31,7 +43,16 @@ public class MainTest extends Main {
 		String title = driver.getTitle();
 		assertThat(title, containsString("Getting Started on Heroku with Java"));
 
-		driver.close();
+	}
+
+	@Test
+	public void test2() {
+
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
+
+		//Source on GitHubをクリック
+		driver.findElement(By.linkText("Source on GitHub")).click();
+		System.out.println(driver.getTitle());
 
 	}
 
