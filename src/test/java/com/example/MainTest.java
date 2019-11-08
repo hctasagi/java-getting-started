@@ -63,7 +63,7 @@ public class MainTest extends Main {
 		//150 add-on servicesをクリック
 		driver.findElement(By.linkText("150 add-on services")).click();
 
-		driver.findElement(By.name("q")).sendKeys("heroku");
+		driver.findElement(By.id("site-search")).sendKeys("heroku");
 		driver.findElementByClassName("search-submit").click();
 	}
 
