@@ -49,6 +49,8 @@ public class MainTest extends Main {
 	@Test
 	public void test2() {
 
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
+
 		//Source on GitHubをクリック
 		driver.findElement(By.linkText("Source on GitHub")).click();
 		System.out.println(driver.getTitle());
