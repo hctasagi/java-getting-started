@@ -23,7 +23,6 @@ public class MainTest extends Main {
 		options.addArguments("--headless", "--disable-gpu");
 
 		driver = new ChromeDriver(options);
-		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 	}
 
@@ -35,6 +34,7 @@ public class MainTest extends Main {
 	@Test
 	public void test1() {
 
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//タイトルを取得
 		System.out.println(driver.getTitle());
