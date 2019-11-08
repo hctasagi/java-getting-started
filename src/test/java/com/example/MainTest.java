@@ -8,7 +8,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -42,7 +41,7 @@ public class MainTest extends Main {
 		//Getting Started with Javaをクリック
 		driver.findElement(By.linkText("Getting Started with Java")).click();
 		String title = driver.getTitle();
-		assertThat(title, containsString("Getting Started on Heroku with Java"));
+		assertThat(title, is("Getting Started on Heroku with Java"));
 
 	}
 
@@ -57,16 +56,5 @@ public class MainTest extends Main {
 
 	}
 
-	@Test
-	public void test3() {
-		driver.get("https://ancient-journey-46819.herokuapp.com/");
-
-		//150 add-on servicesをクリック
-		driver.findElement(By.linkText("150 add-on services")).click();
-
-		WebElement search = driver.findElement(By.name("q"));
-		search.sendKeys("heroku");
-		driver.findElement(By.className("search-submit")).click();
-	}
 
 }
