@@ -43,7 +43,7 @@ public class MainTest extends Main {
 		//Getting Started with Javaをクリック
 		driver.findElement(By.linkText("Getting Started with Java")).click();
 		String title = driver.getTitle();
-		assertThat(title, is("Getting Started on Heroku with Java"));
+		assertThat(title, containsString("Getting Started on Heroku with Java"));
 
 	}
 
