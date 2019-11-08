@@ -56,4 +56,15 @@ public class MainTest extends Main {
 
 	}
 
+	@Test
+	public void test3() {
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
+
+		//150 add-on servicesをクリック
+		driver.findElement(By.linkText("150 add-on services")).click();
+
+		driver.findElement(By.className("q")).sendKeys("heroku");
+		driver.findElementByClassName("search-submit").click();
+	}
+
 }
