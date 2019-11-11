@@ -55,5 +55,13 @@ public class MainTest extends Main {
 
 	}
 
+	@Test
+	public void test3() {
+
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
+
+		System.out.println(3);
+
+	}
 
 }
