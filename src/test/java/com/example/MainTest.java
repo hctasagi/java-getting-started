@@ -1,9 +1,6 @@
 package com.example;
 
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public class MainTest extends Main {
-	ExecutorService executorService = Executors.newFixedThreadPool(10);
 
 	private ChromeDriver driver;
 
