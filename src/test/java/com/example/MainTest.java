@@ -4,9 +4,9 @@ package com.example;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +17,7 @@ public class MainTest extends Main {
 	private ChromeDriver driver;
 
 
-	@Before
+	@BeforeEach
 	public void setUp() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless", "--disable-gpu");
@@ -26,7 +26,7 @@ public class MainTest extends Main {
 
 	}
 
-	@After
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}
