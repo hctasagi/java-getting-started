@@ -26,7 +26,7 @@ public class MainTest extends Main {
 	}
 
 	@Test
-	public void test1() throws InterruptedException {
+	public void test1() {
 
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
