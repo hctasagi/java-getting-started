@@ -1,6 +1,8 @@
 package com.example;
 
 
+import static org.testng.Assert.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,7 +37,7 @@ public class MainTest extends Main {
 		driver.findElement(By.linkText("Getting Started with Java")).click();
 
 		//タイトルを取得
-				System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle());
 
 
 	}
@@ -47,7 +49,8 @@ public class MainTest extends Main {
 
 		//Source on GitHubをクリック
 		driver.findElement(By.linkText("Source on GitHub")).click();
-		System.out.println(driver.getTitle());
+		String title = driver.getTitle();
+		assertEquals(title, "java-getting-started");
 
 	}
 
