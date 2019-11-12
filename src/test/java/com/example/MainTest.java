@@ -1,11 +1,11 @@
 package com.example;
 
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class MainTest extends Main {
 
@@ -26,7 +26,7 @@ public class MainTest extends Main {
 	}
 
 	@Test
-	public void test1() {
+	public void test1() throws InterruptedException {
 
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
