@@ -28,7 +28,7 @@ public class MainTest extends Main {
 	@Test
 	public void test1() {
 
-//		driver.get("https://ancient-journey-46819.herokuapp.com/");
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//タイトルを取得
 		System.out.println(1);
@@ -43,7 +43,7 @@ public class MainTest extends Main {
 	@Test
 	public void test2() {
 
-//		driver.get("https://ancient-journey-46819.herokuapp.com/");
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		//Source on GitHubをクリック
 //		driver.findElement(By.linkText("Source on GitHub")).click();
@@ -54,7 +54,7 @@ public class MainTest extends Main {
 	@Test
 	public void test3() {
 
-//		driver.get("https://ancient-journey-46819.herokuapp.com/");
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		System.out.println(3);
 
