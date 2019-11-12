@@ -29,7 +29,6 @@ public class MainTest extends Main {
 	public void test1() throws InterruptedException {
 
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
-		Thread.sleep(3000);
 
 		//タイトルを取得
 		System.out.println(1);
