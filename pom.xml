@@ -148,7 +148,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M3</version>
  			<configuration>
-     			<parallel>all</parallel>
+     			<parallel>classes</parallel>
+     			<threadCount>5</threadCount>
    			    <forkCount>2.5C</forkCount>
   			</configuration>
        </plugin>
