@@ -2,27 +2,26 @@
 package com.example;
 
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 public class MainTest extends Main {
 
 	private ChromeDriver driver;
 
-	@BeforeClass
+	@BeforeEach
 	public void setUp() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless", "--disable-gpu");
 
 		driver = new ChromeDriver(options);
-
 	}
 
-	@AfterClass
+	@AfterEach
 	public void tearDown() {
 		driver.quit();
 	}
