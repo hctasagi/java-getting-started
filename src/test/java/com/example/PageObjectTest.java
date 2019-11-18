@@ -31,7 +31,7 @@ public class PageObjectTest {
 
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
-		assertEquals(driver.getTitle(), "Java");
+		assertEquals(driver.getTitle(), "Java Getting Started on Heroku");
 
 	}
 
