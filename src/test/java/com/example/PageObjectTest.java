@@ -27,17 +27,23 @@ public class PageObjectTest {
 	}
 
 	@Test
-	public void テスト() {
+	public void テスト1() {
 
 		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		assertEquals(driver.getTitle(), "Java");
+
+	}
+
+	@Test
+	public void テスト2() {
+
+		driver.get("https://ancient-journey-46819.herokuapp.com/");
 
 		TopPage top = new TopPage(driver);
 		top.link();
 
 		System.out.println(driver.getTitle());
 	}
-
 
 }
